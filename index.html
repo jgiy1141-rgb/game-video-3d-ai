@@ -1,0 +1,199 @@
+```html
+<!DOCTYPE html>
+<html lang="my">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Video 3D AI</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #080b14;
+      color: white;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 900px;
+      margin: auto;
+      padding: 35px 0;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .header p {
+      color: #aab2c5;
+      font-size: 15px;
+    }
+
+    .card {
+      background: #121827;
+      border: 1px solid #202a40;
+      border-radius: 18px;
+      padding: 25px;
+      margin-bottom: 20px;
+    }
+
+    .upload-box {
+      border: 2px dashed #394763;
+      border-radius: 15px;
+      padding: 40px 20px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .upload-box:hover {
+      border-color: #6c7cff;
+    }
+
+    .upload-icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    .upload-button {
+      display: inline-block;
+      background: #5d6cff;
+      padding: 13px 24px;
+      border-radius: 10px;
+      margin-top: 18px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    #fileName {
+      margin-top: 15px;
+      color: #aeb7cc;
+      word-break: break-word;
+    }
+
+    video {
+      width: 100%;
+      max-height: 450px;
+      border-radius: 12px;
+      margin-top: 20px;
+      background: black;
+      display: none;
+    }
+
+    .settings {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    label {
+      color: #c9d0df;
+      font-size: 14px;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    select {
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #303b55;
+      background: #0c1120;
+      color: white;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .feature {
+      background: #0c1120;
+      border: 1px solid #202a40;
+      border-radius: 12px;
+      padding: 15px;
+    }
+
+    .feature strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .feature span {
+      color: #8993a9;
+      font-size: 13px;
+    }
+
+    #generateBtn {
+      width: 100%;
+      border: none;
+      padding: 16px;
+      margin-top: 22px;
+      border-radius: 12px;
+      background: #6675ff;
+      color: white;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    #generateBtn:hover {
+      background: #7885ff;
+    }
+
+    #progressBox {
+      display: none;
+      margin-top: 25px;
+    }
+
+    .progress-bg {
+      width: 100%;
+      height: 12px;
+      background: #252d40;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    #progressBar {
+      width: 0%;
+      height: 100%;
+      background: #6675ff;
+      transition: width 0.3s;
+    }
+
+    #status {
+      margin-top: 12px;
+      text-align: center;
+      color: #b8c0d3;
+    }
+
+    #results {
+      display: none;
+    }
+
+    .result-title {
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    .download-bt
+```
