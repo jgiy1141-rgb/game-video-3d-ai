@@ -12,35 +12,7 @@
       margin: 0;
       padding: 0;
     }
-<script>
-const input = document.getElementById("videoInput");
-const btn = document.getElementById("generateBtn");
-const status = document.getElementById("status");
 
-btn.onclick = async () => {
-  const video = input.files[0];
-
-  if (!video) {
-    alert("Video တစ်ခုရွေးပါ");
-    return;
-  }
-
-  status.textContent = "Video ကို Backend ဆီ ပို့နေပါတယ်...";
-
-  const form = new FormData();
-  form.append("video", video);
-
-  const res = await fetch(
-    "YOUR_WORKER_URL",
-    {
-      method: "POST",
-      body: form
-    }
-  );
-
-  status.textContent = await res.text();
-};
-</script>
     body {
       font-family: Arial, sans-serif;
       background: #080b14;
