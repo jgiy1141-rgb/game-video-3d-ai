@@ -318,12 +318,12 @@
 const input = document.getElementById("videoInput");
 const btn = document.getElementById("generateBtn");
 const status = document.getElementById("status");
+const progressBox = document.getElementById("progressBox");
 const preview = document.getElementById("videoPreview");
 const fileName = document.getElementById("fileName");
 
 input.onchange = () => {
   const video = input.files[0];
-
   if (!video) return;
 
   fileName.textContent = "📹 " + video.name;
@@ -340,6 +340,7 @@ btn.onclick = async () => {
   }
 
   btn.disabled = true;
+  progressBox.style.display = "block";
   status.textContent = "Video ကို Backend ဆီ ပို့နေပါတယ်...";
 
   const form = new FormData();
@@ -347,14 +348,15 @@ btn.onclick = async () => {
 
   try {
     const res = await fetch(
-  "https://game-video-3d-ai.jgiy1141.workers.dev",
+      "https://game-video-3d-ai.jgiy1141.workers.dev",
       {
         method: "POST",
         body: form
       }
     );
 
-    status.textContent = await res.text();
+    const text = await res.text();
+    status.textContent = text;
 
   } catch (err) {
     status.textContent = "Error: " + err.message;
